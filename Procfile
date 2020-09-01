@@ -1,0 +1,1 @@
+<web>: <rake jobs:workgit add -A>
