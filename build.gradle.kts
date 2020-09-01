@@ -40,24 +40,4 @@ tasks.register("stage") {
     dependsOn("build")
 }
 
-kotlin {
-    js {
-        browser {
-            webpackTask {
-                cssSupport.enabled = true
-            }
-
-            runTask {
-                cssSupport.enabled = true
-            }
-
-            testTask {
-                useKarma {
-                    useChromeHeadless()
-                    webpackConfig.cssSupport.enabled = true
-                }
-            }
-        }
-        binaries.executable()
-    }
-}
+kotlin.js().browser { }
