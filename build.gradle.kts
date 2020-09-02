@@ -12,6 +12,13 @@ repositories {
     jcenter()
 }
 
+kotlin {
+    js {
+        browser {}
+        binaries.executable()
+    }
+}
+
 dependencies {
     implementation(kotlin("stdlib-js"))
 
@@ -41,4 +48,4 @@ tasks.register("stage") {
     dependsOn("build")
 }
 
-kotlin.js().browser { }
+kotlin.target.browser { }
